@@ -66,7 +66,7 @@ exports.getwishlist = (req, res, next) => {
 };
 
 //adding products to wish list
-
+ 
 exports.postwishlist = (req, res, next) => {
   const prodId = req.body.productId;
   const updatedSize = req.body.sizel;
