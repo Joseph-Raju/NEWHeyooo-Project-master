@@ -1,0 +1,20 @@
+
+
+// export.postwishlist instead of  Product.findOneAndUpdate({_id : prodId }, {size:updatedSize}
+
+
+Product.findById(prodId)
+.then(product => {
+  product.size = updatedSize;
+  return product.save();
+})
+.then(result => {
+  console.log('UPDATED PRODUCT!');
+  res.redirect('/wishlist');
+})
+.catch(err => console.log(err));
+
+
+
+
+

@@ -1,0 +1,18 @@
+
+<form action="/wishlist" method="post">
+    <h2>Size: <select  name="sizel" id="sizel" class="box" >
+        <div class="form-control">
+         <label for="size">Size</label>
+            <optgroup label ="size"  step="0.01">
+                
+            <option  value="S"> S </option>
+            <option  value="M"> M  </option>
+            <option  value="L"> L </option>
+            <option  value="XL"> XL </option>
+            </optgroup>
+        </div>
+      </select></h2>
+      <p><%= product.description %></p>
+    <button class="btn" type="submit">Add to wishlist</button>
+    <input type="hidden" name="productId" value="<%= product._id %>">
+</form>
